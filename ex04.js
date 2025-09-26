@@ -2,12 +2,12 @@
 // Instructions: Write a recursive function named `sumOfDigits` that calculates the sum of the elements of a given array.
 // Test your function by calculating the sum of the array and logging the result to the console.
 
-function sumOfDigits(n, i) {
-  if (i === n.length) {
+function sumOfDigits(n) {
+  if (n.length === 0) {
     return 0;
   }
 
-  return n[i] + sumOfDigits(n, i + 1);
+  return n[0] + sumOfDigits(n.splice(1));
 }
 
-console.log(sumOfDigits([1, 3, 7, 1, 8], 0)); // 20
+console.log(sumOfDigits([1, 3, 7, 1, 8])); // 20
